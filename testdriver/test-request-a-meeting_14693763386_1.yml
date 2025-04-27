@@ -1,0 +1,13 @@
+version: 4.2.29
+session: 680e5685715f68d750e81cbe
+steps:
+  - prompt: Click on "Request A Meeting" button.
+    commands:
+      - command: hover-text
+        text: Request A Meeting
+        description: button in the top right corner of the webpage
+        action: click
+  - prompt: Assert that the meeting request form appears.
+    commands:
+      - command: assert
+        expect: the meeting request form with "Send us a message" appears
