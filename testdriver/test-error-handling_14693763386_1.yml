@@ -1,0 +1,18 @@
+version: 4.2.29
+session: 680e5694715f68d750e81cc8
+steps:
+  - prompt: Navigate to a non-existent page.
+    commands:
+      - command: hover-text
+        text: theentrepreneur.studio
+        description: address bar with the current URL
+        action: click
+      - command: type
+        text: http://nonexistent.example.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert that a 404 error page is displayed with the correct message.
+    commands:
+      - command: assert
+        expect: This site can't be reached
