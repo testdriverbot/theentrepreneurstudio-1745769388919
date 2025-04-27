@@ -1,0 +1,13 @@
+version: 4.2.29
+session: 680e5683715f68d750e81cbc
+steps:
+  - prompt: Click on "Join as a Mentor" button.
+    commands:
+      - command: hover-text
+        text: Join as a Mentor
+        description: button to join as a mentor on the webpage
+        action: click
+  - prompt: Assert that the mentor registration form appears.
+    commands:
+      - command: assert
+        expect: the mentor registration form is visible with "Sign Up Request"
