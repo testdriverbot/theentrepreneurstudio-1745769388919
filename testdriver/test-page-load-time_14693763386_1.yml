@@ -1,0 +1,15 @@
+version: 4.2.29
+session: 680e56bd43e1aa906e7ebc6e
+steps:
+  - prompt: Refresh the homepage.
+    commands:
+      - command: press-keys
+        keys:
+          - control
+          - r
+  - prompt: Assert that the page loads within 3 seconds.
+    commands:
+      - command: wait
+        timeout: 3000
+      - command: assert
+        expect: Empowering Entrepreneurs is visible on the page
