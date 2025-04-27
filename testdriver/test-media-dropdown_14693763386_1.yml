@@ -1,0 +1,15 @@
+version: 4.2.29
+session: 680e569143e1aa906e7ebc3e
+steps:
+  - prompt: Hover over the "Media" menu item.
+    commands:
+      - command: hover-text
+        text: Media
+        description: menu item in the navigation bar
+        action: hover
+  - prompt: Assert that the media submenu is displayed with correct options.
+    commands:
+      - command: assert
+        expect: >-
+          the media submenu displays "Blogs", "What's Happening", and
+          "Magazines"
