@@ -1,0 +1,15 @@
+version: 4.2.29
+session: 680e568e715f68d750e81cc4
+steps:
+  - prompt: Click on "Discover the Benefits of Membership" button.
+    commands:
+      - command: hover-text
+        text: Discover the Benefits of Membership
+        description: button below the introductory text
+        action: click
+  - prompt: Assert that the membership benefits page is displayed.
+    commands:
+      - command: assert
+        expect: >-
+          the membership benefits page with "Build. Connect. Accelerate." is
+          displayed
